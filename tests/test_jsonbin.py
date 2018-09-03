@@ -40,6 +40,18 @@ def test_jsonbin_update():
     assert d == {"test2": "ok", "test": v2}
 
 
+def test_update_with_string():
+    v1 = str(uuid4())
+    v2 = str(uuid4())
+    r = jsonbin.update(BIN_ID, json.dumps({"test": v1}))
+    rid = r['id']
+
+    jsonbin.update(rid, {"test2": "ok", "test": v2})
+
+    d = jsonbin.read(rid)
+    assert d == {"test2": "ok", "test": v2}
+
+
 def test_jsonbin_merge():
     v1 = str(uuid4())
     v2 = str(uuid4())
@@ -62,3 +74,9 @@ def test_bin():
     assert bin.read() == {"test": v2}
 
     bin.delete()
+
+
+def test_should_raise_ValueError():
+
+    with pytest.raises(ValueError):
+        jsonbin.create_bin("this is not a json")
