@@ -1,6 +1,6 @@
 import pytest
 
-from jsonbinio import JSONbinIO
+from jsonbinio import JSONBinIO
 from uuid import uuid4
 import os
 import json
@@ -9,7 +9,7 @@ import json
 here = os.path.dirname(os.path.abspath(__file__))
 with open(os.path.join(here, '.secret_key.json')) as f:
     secret = json.load(f)
-    jsonbin = JSONbinIO(secret['secret_key'])
+    jsonbin = JSONBinIO(secret['secret_key'])
     API_TEST_COLLECTION_ID = secret['collection_id']
     BIN_ID = secret['bin_id']
 

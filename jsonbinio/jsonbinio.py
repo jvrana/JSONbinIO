@@ -64,7 +64,7 @@ class JSONBin(object):
         return self.jsonbinio.merge(self.bin_id, data)
 
 
-class JSONbinIO(object):
+class JSONBinIO(object):
 
     home = "https://api.jsonbin.io"
 
