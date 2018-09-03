@@ -63,6 +63,16 @@ class JSONBin(object):
     def merge(self, data):
         return self.jsonbinio.merge(self.bin_id, data)
 
+    def update_from_json(self, path):
+        with open(path, 'r') as f:
+            data = json.load(f)
+        return self.update(data)
+
+    def merge_from_json(self, path):
+        with open(path, 'r') as f:
+            data = json.load(f)
+        return self.merge(data)
+
 
 class JSONBinIO(object):
 

@@ -58,3 +58,8 @@ mybin.merge({"newdata": "this is added to existing data")
 ```
 mybin.delete()
 ```
+
+## Contributing
+
+1. `make lock` - Lock dependencies
+2. `make deploy` - Deploy using twine
