@@ -1,1 +1,1 @@
-from jsonbinio.jsonbinio import JSONBinIO
+from .jsonbin import JSONBinIO

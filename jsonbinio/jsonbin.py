@@ -7,7 +7,7 @@ from functools import wraps
 import logging
 import json
 
-logger = logging.getLogger('JSONbin_logger')
+logger = logging.getLogger('JSONBin_logger')
 logger.setLevel(logging.INFO)
 
 
@@ -47,9 +47,9 @@ class RequestDecorator(object):
 
 class JSONBin(object):
 
-    def __init__(self, bin_id, jsonbinio):
+    def __init__(self, bin_id, binio):
         self.bin_id = bin_id
-        self.jsonbinio = jsonbinio
+        self.jsonbinio = binio
 
     def read(self):
         return self.jsonbinio.read(self.bin_id)

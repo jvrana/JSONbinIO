@@ -1,6 +1,6 @@
 import pytest
 
-from jsonbinio.jsonbinio import JSONBinIO
+from jsonbinio import JSONBinIO
 from uuid import uuid4
 import os
 import json

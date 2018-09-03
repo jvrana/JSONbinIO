@@ -57,7 +57,7 @@ setup(
         title=ver['title'],
         name='JSONBinIO',
         version=ver['version'],
-        packages=[MAINPACKAGE],
+        packages=["jsonbinio",],
         url=ver['url'],
         license='',
         author=ver['author'],
