@@ -2,7 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/jvrana/JSONbinIO.svg?style=svg)](https://circleci.com/gh/jvrana/JSONbinIO)
 
-This is a light python wrapper for the [JSONBinIO](https://jsonbin.io/) api, provides free JSON storage.
+This is a light python wrapper for the [JSONBinIO](https://jsonbin.io/) api, which provides free online JSON storage.
 
 ## Installation
 
