@@ -1,6 +1,6 @@
 # JSONBinIO
 
-This is a light python wrapper for the [JSONBinIO](https://jsonbin.io/) api.
+This is a light python wrapper for the [JSONBinIO](https://jsonbin.io/) api, provides free JSON storage.
 
 ## Installation
 
