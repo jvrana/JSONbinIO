@@ -7,11 +7,19 @@ import json
 
 
 here = os.path.dirname(os.path.abspath(__file__))
-with open(os.path.join(here, '.secret_key.json')) as f:
-    secret = json.load(f)
-    jsonbin = JSONBinIO(secret['secret_key'])
-    API_TEST_COLLECTION_ID = secret['collection_id']
-    BIN_ID = secret['bin_id']
+
+
+
+try:
+    with open(os.path.join(here, '.secret_key.json')) as f:
+        secret = json.load(f)
+        jsonbin = JSONBinIO(secret['secret_key'])
+        API_TEST_COLLECTION_ID = secret['collection_id']
+        BIN_ID = secret['bin_id']
+except FileNotFoundError:
+    jsonbin = JSONBinIO(os.environ.get('SECRET_KEY'))
+    API_TEST_COLLECTION_ID = os.environ.get("COLLECTION_ID")
+    BIN_ID = os.environ.get("BIN_ID")
 
 
 def test_jsonbin_create_then_delete():
